@@ -60,3 +60,16 @@ body
 {
     background: var(--white);
 }
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a
+{
+    color: var(--blue);
+}
