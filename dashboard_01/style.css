@@ -52,4 +52,11 @@ body
 .navigation ul li:nth-child(1)
 {
     margin-bottom: 40px;
+    /** Retirar o efetito ao passar o mouse sobre o 1 item do menu */
+    pointer-events: none;
+}
+/** Efeito ao passar mouse sobre os itens do menu */
+.navigation ul li:hover
+{
+    background: var(--white);
 }
