@@ -34,6 +34,10 @@ body
 	transition: 0.5s;
 	overflow: hidden;
 }
+.navigation.active
+{
+	width: 80px;
+}
 .navigation ul
 {
 	position: absolute;
@@ -138,7 +142,11 @@ body
 	background: var(--white);
 	transition: 0.5s;
 }
-
+.main.active
+{
+	width: calc(100% - 80px);
+	left: 80px;
+}
 .topbar
 {
 	width: 100%;
