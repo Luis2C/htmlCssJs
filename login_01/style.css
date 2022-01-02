@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+  margin: 0px; /* É a margem fora do elemento. Retira a margem padrão do browser - 8px */
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.main-login {
+  width: 100vw; /* Percentual da largura da "viewport width"  */
+  height: 100vh; /* Percentual do comprimento da "viewport heigth */
+  background: #201b2c; /* Cor de fundo do elemento */
+  display: flex; /* Posiciona os elementos um ao lado do outro */
+  justify-content: center; /* Ajusta os elementos no "eixo x" */
+  align-items: center; /* Ajusta os elementos no "eixo y" */
+}
+
+.left-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Posicionar os elementos um abaixo do outro utilizando "display: flax" */
+}
+
+.left-login > h1 {
+  font-size: 3vw;
+  color: #77ffc0;
+}
+
+.left-login-image {
+  width: 35vw;
+}
+
+.right-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login {
+  width: 60%; /* Pega 60% da "div" (rigth-login) que é "50vw" */
+  /* Não tem "height", obtendo o "height" automático */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Posicionar os elementos um abaixo do outro utilizando "display: flax" */
+  padding: 30px 35px; /* É a margem dentro do elemento, sen d 1' posição "eixo y" e a 2' posição "eixo x" */
+  background: #2f2841;
+  border-radius: 20px; /* Deixar os cantos do elemento arredondados */
+  box-shadow: 0px 10px 40px #00000056; /* Adicionar sombra ao elemento, sendo 1' posição "eixo x", 2' "eixo y", 3' "blur" e o 4' "cor" */
+}
+
+.card-login > h1 {
+  color: #00ff88;
+  font-weight: 800; /* É o peso (espessura) da fonte. ( deixando a fonte mais ou menos grossa ) */
+  margin: 0;
+}
+
+.textfield {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ajusta os elementos no "eixo x" ( inverte pelo uso do "flex-direction" )  */
+  justify-content: center; /* Ajusta os elementos no "eixo y" ( inverte pelo uso do "flex-direction" ) */
+  margin: 10px 0px; /* 1' valor "eixo y" e o 2' valor "eixo x" */
+}
+
+.textfield > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px; /* Ao receber apenas um valor, é atribuido ao "eixo x" e para o "eixo y" */
+  background: #514869;
+  color: #f0ffffde;
+  font-size: 12pt; /* Mesmo tamanho utilizado nos editores, para tamanhos de fonte */
+  box-shadow: 0px 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box; /* "div filha" jamis irá ultrapassar a "div pai" */
+}
+
+.textfield > input::placeholder {
+  color: #f0ffff94;
+}
+
+.textfield > label {
+  color: #f0ffffde;
+  margin-bottom: 10px;
+}
+
+.btn-login {
+  width: 100%; /* Ocupar todo o espaço do pai (card) */
+  padding: 16px 0px; /* 1' "eixo y" e 2' "eixo x" */
+  margin: 25px; /* Margem de 25px em todos os eixos */
+  border: none; /* Retirar a borda do elemento */
+  border-radius: 8px; /* Deixar as bordas do botão mais arredondadas */
+  outline: none; /* Retirar a borda do elementoto, quando clicamos nele */
+  text-transform: uppercase; /* Alterar a formatação do texto */
+  font-weight: 800; /* Alterar o peso da fonte (espessura) */
+  letter-spacing: 3px; /* Distância do espaço entre cada letra */
+  color: #2b134b; /* Cor das letras do elemento */
+  background: #00ff88; /* Cor de fundo do elemento */
+  cursor: pointer; /* Incluir alteração do cursor, ao passar o mouse sobre o elemento */
+  box-shadow: 0px 10px 40px -12px #00ff8052; /* Adicionar sombre. 1' eixo x, 2' eixo y, 3' blur, 4' spread e 5' cor */
+}
+
+@media only screen and (max-width: 950px) {
+  .card-login {
+    width: 85%;
+  }  
+}
+
+@media only screen and (max-width: 600px) {
+  .main-login {
+    flex-direction: column;
+  }
+
+  .left-login > h1 {
+    display: none;
+  }
+
+  .left-login {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-login {
+    width: 100%;
+    height: auto;
+  }
+
+  .left-login-image {
+    width: 50vw;
+  }
+
+  .card-login {
+    width: 90%;
+  }
+}
